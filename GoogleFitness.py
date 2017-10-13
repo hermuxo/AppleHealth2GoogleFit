@@ -3,6 +3,8 @@ import json
 from random import randint
 import config
 
+
+
 def getDataSources():
 	url = "https://www.googleapis.com/fitness/v1/users/me/dataSources"
 
@@ -22,7 +24,7 @@ def createStepDataSource():
 	url = "https://www.googleapis.com/fitness/v1/users/me/dataSources"
 
 	headers = { 'content-type': 'application/json',
-				'Authorization': 'Bearer %s' % ACCESS_TOKEN }
+				'Authorization': 'Bearer %s' % config.accessToken }
 	data = {
 		  "dataStreamName": "AppleStepDataSource",
 		  "type": "derived",
@@ -64,7 +66,7 @@ def createWeightDataSource():
 	url = "https://www.googleapis.com/fitness/v1/users/me/dataSources"
 
 	headers = { 'content-type': 'application/json',
-				'Authorization': 'Bearer %s' % ACCESS_TOKEN }
+				'Authorization': 'Bearer %s' % config.accessToken }
 	data = {
 		  "dataStreamName": "AppleWeightDataSource",
 		  "type": "derived",
@@ -106,7 +108,7 @@ def createDistanceDataSource():
 	url = "https://www.googleapis.com/fitness/v1/users/me/dataSources"
 
 	headers = { 'content-type': 'application/json',
-				'Authorization': 'Bearer %s' % ACCESS_TOKEN }
+				'Authorization': 'Bearer %s' % config.accessToken }
 	data = {
 		  "dataStreamName": "AppleWeightDataSource",
 		  "type": "derived",
@@ -212,7 +214,7 @@ def addData(dataSourceId,dataPoints,minStartTime ,maxEndTime):
 	url = "https://www.googleapis.com/fitness/v1/users/me/dataSources/" + dataSourceId + "/datasets/" +str(minStartTime*1000000) + "-"+ str(maxEndTime*1000000)
 
 	headers = { 'content-type': 'application/json',
-				'Authorization': 'Bearer %s' % ACCESS_TOKEN }
+				'Authorization': 'Bearer %s' % config.accessToken }
 	data = {
 	  "dataSourceId": dataSourceId,
 	  "minStartTimeNs": minStartTime*1000000,
