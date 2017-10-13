@@ -40,7 +40,7 @@ For more details: https://developers.google.com/fit/rest/v1/get-started
 `python main.py /path/to/export.xml`
 
 It takes about 10 minutes for data to show on Google Fit.
-<a href="https://raw.githubusercontent.com//hermanmaritz/AppleHealth2GoogleFit/blob/master/screenshots/export_apple_health_data3.jpg?raw=true"><img src="https://raw.githubusercontent.com//hermanmaritz/AppleHealth2GoogleFit/blob/master/screenshots/export_apple_health_data3.jpg?raw=true" align="center" width="500" ></a>
+<a href="https://github.com/hermanmaritz/AppleHealth2GoogleFit/blob/master/screenshots/export_apple_health_data3.png?raw=true"><img src="https://github.com/hermanmaritz/AppleHealth2GoogleFit/blob/master/screenshots/export_apple_health_data3.png?raw=true" align="center" width="500" ></a>
 
 
 
