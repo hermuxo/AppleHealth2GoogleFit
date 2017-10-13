@@ -43,5 +43,5 @@ It takes about 10 minutes for data to show on Google Fit.
 
 <a href=""><img src="" align="center" width="500" ></a>
 
-(https://raw.githubusercontent.com/hermanmaritz/AppleHealth2GoogleFit/master/screenshots/export_apple_health_data3.jpg)
+![](https://raw.githubusercontent.com/hermanmaritz/AppleHealth2GoogleFit/master/screenshots/export_apple_health_data3.jpg)
 
