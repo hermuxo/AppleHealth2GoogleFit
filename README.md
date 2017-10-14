@@ -26,12 +26,12 @@ Now for the difficult part. Getting a Google Access Token.
 Easiest Way:
 1. Got to https://developers.google.com/oauthplayground/
 2. Scroll down and select Fitness v1
-3. Select and Authonrize:
+3. Select and Authorize:
 - https://www.googleapis.com/auth/fitness.activity.write (for steps)
 - https://www.googleapis.com/auth/fitness.body.write (for weight)
 - https://www.googleapis.com/auth/fitness.location.write (for distance)
 4. Click on *Exchange auth code for token* 
-5. Rename `config.py.example` to `config.py` and add the access token.
+5. Rename `config.py.example` to `config.py` and add the access token
 
 For more details: https://developers.google.com/fit/rest/v1/get-started
 
