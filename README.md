@@ -16,8 +16,6 @@ Currently migrating:
 ### Get Apple Health Data
 You need to to export your Apple Health data in XML format. Here are some clues on how to do that:
 
-<a href=""><img src="https://raw.githubusercontent.com/naspersclassifieds-shared/interviews/master/process.png?token=AHa0sdWPazQShmxQ5lmRS3Zu2s2EjhtXks5ZXke1wA%3D%3D" align="center" width="500" ></a>
-
 ![](https://raw.githubusercontent.com/hermanmaritz/AppleHealth2GoogleFit/master/screenshots/export_apple_health_data1.jpg)   ![](https://raw.githubusercontent.com/hermanmaritz/AppleHealth2GoogleFit/master/screenshots/export_apple_health_data2.jpg)
 
 ### Get Access to Google Fitness API
