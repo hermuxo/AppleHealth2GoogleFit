@@ -152,11 +152,13 @@ def sendPoints(dataSourceId,records):
     if records[0].recordType == "HKQuantityTypeIdentifierBodyMass":
 
         for record in records:
-
+            endTimeNanos = record.endTime*1000000
+            if endTimeNanos > 1546513741000000000:
+                endTimeNanos = 1546513741000000000
             point = {
                 "dataTypeName": "com.google.weight",
                 "startTimeNanos": record.startTime*1000000,
-                "endTimeNanos": record.endTime*1000000,
+                "endTimeNanos": endTimeNanos,
                 "value": [
                     {
                         "fpVal": record.value
@@ -167,8 +169,10 @@ def sendPoints(dataSourceId,records):
 
     if records[0].recordType == "HKQuantityTypeIdentifierStepCount":
 
-        for record in records:
-
+        for record in records:            
+            endTimeNanos = record.endTime*1000000
+            if endTimeNanos > 1546513741000000000:
+                endTimeNanos = 1546513741000000000
             point = {
                 "dataTypeName": "com.google.step_count.delta",
                 "startTimeNanos": record.startTime*1000000,
@@ -184,7 +188,9 @@ def sendPoints(dataSourceId,records):
     if records[0].recordType == "HKQuantityTypeIdentifierDistanceWalkingRunning":
 
         for record in records:
-
+            endTimeNanos = record.endTime*1000000
+            if endTimeNanos > 1546513741000000000:
+                endTimeNanos = 1546513741000000000
             point = {
                 "dataTypeName": "com.google.distance.delta",
                 "startTimeNanos": record.startTime*1000000,
@@ -209,7 +215,6 @@ def chunks(l, n):
         yield l[i:i+n]
 
 def addData(dataSourceId,dataPoints,minStartTime ,maxEndTime):
-
 
     url = "https://www.googleapis.com/fitness/v1/users/me/dataSources/" + dataSourceId + "/datasets/" +str(minStartTime*1000000) + "-"+ str(maxEndTime*1000000)
 
