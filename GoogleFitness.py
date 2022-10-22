@@ -9,14 +9,14 @@ def getDataSources():
     url = "https://www.googleapis.com/fitness/v1/users/me/dataSources"
 
     headers = { 'content-type': 'application/json',
-                'Authorization': 'Bearer %s' % ACCESS_TOKEN }
+                'Authorization': 'Bearer %s' % config.accessToken }
     r = requests.get(url, headers=headers)
 
     if r.status_code == 200:
         return True
     else:
-        print r.status_code
-        print r.content
+        print (r.status_code)
+        print (r.content)
         return False
 
 
@@ -57,8 +57,8 @@ def createStepDataSource():
         dataSourceId =response['dataStreamId']
         return dataSourceId
     else:
-        print r.status_code
-        print r.content
+        print (r.status_code)
+        print (r.content)
         return False
 
 
@@ -99,8 +99,8 @@ def createWeightDataSource():
         dataSourceId =response['dataStreamId']
         return dataSourceId
     else:
-        print r.status_code
-        print r.content
+        print (r.status_code)
+        print (r.content)
         return False
 
 
@@ -141,8 +141,8 @@ def createDistanceDataSource():
         dataSourceId =response['dataStreamId']
         return dataSourceId
     else:
-        print r.status_code
-        print r.content
+        print (r.status_code)
+        print (r.content)
         return False
 
 def sendPoints(dataSourceId,records):
@@ -169,7 +169,7 @@ def sendPoints(dataSourceId,records):
 
     if records[0].recordType == "HKQuantityTypeIdentifierStepCount":
 
-        for record in records:            
+        for record in records:
             endTimeNanos = record.endTime*1000000
             if endTimeNanos > 1546513741000000000:
                 endTimeNanos = 1546513741000000000
@@ -230,12 +230,12 @@ def addData(dataSourceId,dataPoints,minStartTime ,maxEndTime):
     r = requests.patch(url, headers=headers, data=json.dumps(data))
 
     if r.status_code == 200:
-        print str(len(dataPoints))  + " dataPoints : " + dataSourceId
+        print(str(len(dataPoints))  + " dataPoints : " + dataSourceId)
 
         return True
     else:
-        print r.status_code
-        print r.content
+        print (r.status_code)
+        print (r.content)
         return False
 
 

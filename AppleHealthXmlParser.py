@@ -26,7 +26,7 @@ class AppleHealthExport(xml.sax.ContentHandler):
 
 
 def parse(filename):
-    print "Reading the XML file... This might take some time..."
+    print("Reading the XML file... This might take some time...")
     parser = xml.sax.make_parser()
     parser.setContentHandler(AppleHealthExport())
     parser.parse(open(filename, "r"))
